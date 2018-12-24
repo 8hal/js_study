@@ -1,8 +1,12 @@
 const title = document.querySelector("#title");
 function click() {
-	const currentClassName = title.className;
-if (currentClassName !== "clicked"){
-title.className = "clicked"	
+	const hasClassClicked = title.classList.contains("clicked");
+	console.log(hasClassClicked);
+if (!hasClassClicked){
+	title.classList.add("clicked");
+}
+else{
+	title.classList.remove("clicked");
 }
 }
 
