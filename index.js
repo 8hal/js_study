@@ -1,13 +1,7 @@
 const title = document.querySelector("#title");
+const CLICKED_CLASS = "clicked"
 function click() {
-	const hasClassClicked = title.classList.contains("clicked");
-	console.log(hasClassClicked);
-if (!hasClassClicked){
-	title.classList.add("clicked");
-}
-else{
-	title.classList.remove("clicked");
-}
+	title.classList.toggle(CLICKED_CLASS)
 }
 
 function init() {
@@ -15,5 +9,3 @@ function init() {
 }
 
 init()
-
-console.log(title.className)
